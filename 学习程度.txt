@@ -1,0 +1,359 @@
+如果你的目标是学这个 AI Engineering from Scratch 项目，并最终能做 LLM / RAG / MCP / Agent 项目，那 Python 不需要学到“专业 Python 后端工程师”的程度，但要达到：
+
+能独立看懂项目代码、自己修改、调试、写小工具，并能使用常见 AI 库。
+
+我建议你把 Python 学习分成 3 个层级。
+
+第一层：必须掌握
+
+这些是你进入项目之前必须会的。
+
+变量与基本类型：int、float、str、bool
+容器：list、dict、tuple、set
+条件判断：if / elif / else
+循环：for / while
+函数：def、参数、返回值
+模块与导入：import
+文件读写：open()、with
+异常处理：try / except
+基础类：class
+pip
+venv
+运行 .py
+基础调试
+会看 traceback 报错
+
+你至少应该能独立写出这种程序：
+
+def average(values):
+    return sum(values) / len(values)
+
+
+data = [10, 20, 30, 40]
+
+
+try:
+    result = average(data)
+    print(result)
+except Exception as e:
+    print("Error:", e)
+
+如果这个级别的代码你能自己写，不需要查很多资料，就可以开始 Phase 1。
+
+第二层：AI 学习必须重点掌握
+
+这部分比“Python 语法”更重要。
+
+1. NumPy
+
+这是最重要的 Python 库之一。
+
+要会：
+
+import numpy as np
+
+
+x = np.array([1, 2, 3])
+A = np.array([[1, 2], [3, 4]])
+
+
+print(A.shape)
+print(A.T)
+print(A @ A)
+
+重点理解：
+
+array
+shape
+indexing
+slicing
+broadcasting
+matrix multiplication
+sum
+mean
+max
+reshape
+transpose
+random
+
+例如以后 Attention 会大量出现：
+
+Q @ K.T
+
+如果 NumPy 的矩阵操作不熟，Transformer 会很难学。
+
+2. Python 函数要熟练
+
+AI 代码里大量都是：
+
+def forward(x, w, b):
+    return x @ w + b
+
+你必须看到就能迅速理解：
+
+输入是什么
+输出是什么
+数据形状是什么
+
+尤其要开始形成：
+
+变量值
++
+变量类型
++
+数组 shape
+
+三者一起思考的习惯。
+
+第三层：开始 AI 工程后需要掌握
+
+不用一开始全部学。
+
+等进入 Phase 10～14 时再补。
+
+重点包括：
+
+面向对象
+
+例如：
+
+class Linear:
+    def __init__(self, in_features, out_features):
+        self.weight = ...
+
+
+    def forward(self, x):
+        return x @ self.weight
+
+至少要理解：
+
+class
+object
+__init__
+self
+method
+inheritance
+
+但不用一开始深入：
+
+metaclass
+descriptor
+multiple inheritance
+类型提示
+
+AI 工程代码现在很常见：
+
+def embed(text: str) -> list[float]:
+    ...
+
+要看得懂：
+
+str
+list[str]
+dict[str, float]
+Optional
+Union
+JSON
+
+极其重要。
+
+Agent、API、Tool Calling、MCP 都大量使用 JSON。
+
+Python：
+
+import json
+
+
+data = {
+    "name": "calculator",
+    "value": 10
+}
+
+
+text = json.dumps(data)
+
+必须熟悉：
+
+dict ↔ JSON
+HTTP / API
+
+以后调用 LLM 时常见：
+
+import requests
+
+需要理解：
+
+GET
+POST
+URL
+headers
+body
+JSON
+API key
+response
+
+但不用成为网络工程师。
+
+环境变量
+
+例如：
+
+import os
+
+
+api_key = os.getenv("OPENAI_API_KEY")
+
+以后 API Key 几乎一定会用。
+
+pathlib
+
+比手写路径舒服：
+
+from pathlib import Path
+
+
+path = Path("data") / "test.txt"
+
+做 RAG、文档处理时很常用。
+
+有哪些 Python 内容可以先不学
+
+第一阶段完全可以跳过：
+
+装饰器深度原理
+生成器底层原理
+协程底层实现
+metaclass
+descriptor
+多重继承
+高级魔术方法
+Python C Extension
+GUI
+Web框架
+爬虫
+数据库深入
+算法竞赛
+
+这些不是你进入 LLM / Agent 的前置条件。
+
+你需要学到什么程度
+
+我给你一个非常实际的判断标准。
+
+如果下面 8 项你能做到 6～7 项，就不要继续“学 Python 基础课”了，直接进入 AI 项目。
+
+能创建 .py 并运行。
+能写函数。
+能使用 list / dict。
+能读取文本文件。
+能安装第三方库。
+能创建虚拟环境。
+能看懂常见报错。
+能使用 NumPy 做基本矩阵计算。
+
+例如给你：
+
+import numpy as np
+
+
+X = np.array([
+    [1, 2],
+    [3, 4],
+    [5, 6]
+])
+
+
+W = np.array([
+    [0.1, 0.2],
+    [0.3, 0.4]
+])
+
+
+Y = X @ W
+
+
+print(Y)
+print(Y.shape)
+
+如果你可以解释：
+
+X 是什么
+W 是什么
+@ 是什么
+Y shape 是多少
+为什么是这个 shape
+
+那么你的 Python 已经足够进入 AI 数学和 ML 阶段。
+
+针对你的 Python 学习安排
+
+我建议不要花一个月甚至两个月专门学 Python。
+
+控制在 2～3 周。
+
+第 1 周：基础语法
+Day 1 变量 / 类型 / print
+Day 2 list / tuple / dict / set
+Day 3 if / for / while
+Day 4 function
+Day 5 module / import
+Day 6 文件读写
+Day 7 综合练习
+第 2 周：Python 工程基础
+pip
+venv
+异常处理
+class
+pathlib
+JSON
+环境变量
+debug
+第 3 周：NumPy
+
+重点：
+
+array
+shape
+index
+slice
+reshape
+broadcasting
+matrix multiplication
+transpose
+mean / sum
+random
+
+学完直接进入：
+
+Phase 1
+Linear Algebra
+
+之后边学 AI 边补 Python。
+
+最重要的一点
+
+你的目标不应该是：
+
+“把 Python 学完以后再开始 AI。”
+
+因为 Python 根本没有“学完”这一说。
+
+更好的路径是：
+
+Python 基础
+     ↓
+开始 AI
+     ↓
+遇到 Python 不会的
+     ↓
+现场补
+     ↓
+继续 AI
+
+对于你这条路线，Python 是工具，不是最终目标。
+
+所以我建议你的程度目标定为：
+
+Python 基础熟练 + NumPy 熟练 + 能读懂 PyTorch / API / Agent 代码。
+
+到这里就完全够用了。

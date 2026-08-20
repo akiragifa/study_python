@@ -10,5 +10,5 @@ print("哈哈", "hh", "xixi", sep=',,')   # 哈哈,,hh,,xixi
 print("1")
 print("2")
 
-print("1", end=' ')
+print("1", end = ' ')
 print("2")    # 1 2
