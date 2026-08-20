@@ -4,8 +4,8 @@ for 变量 in 可迭代对象:
 
 """
 
-str = "helloworld"
-for i in str:
+strin = "helloworld"
+for i in strin:
     print(i, end = ' ')   # h e l l o w o r l d
 
 # -------------------------------------------------------------

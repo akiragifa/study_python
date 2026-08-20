@@ -8,7 +8,7 @@ name = input("请输入你的名字：")
 print("你好，" + name)
 
 age = input("请输入年龄：")
-height = int(input("请输入身高："))     # 输入的数字强制转为字符串
+height = int(input("请输入身高："))     # 输入的数字强制转为整数
 print(age)
 print(type(age))
 

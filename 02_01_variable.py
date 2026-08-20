@@ -1,8 +1,8 @@
 num1 = 3
 num2 = 10
 
-sum = num1 + num2
-print(sum)
+total = num1 + num2
+print(total)
 
 # 变量只有在赋值后才会被创建，使用变量前必须要赋值
 

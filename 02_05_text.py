@@ -11,7 +11,7 @@
 *: 重复输出
 len：字符串长度
 []：索引
-[0:3]：切片，取0-3的左开右闭片段
+[0:3]：切片，取0-3的左闭右开片段
 upper()：转大写
 lower()：转小写
 strip()：去空格
@@ -164,7 +164,7 @@ print(10 not in nums)   # True
 
 
 my_name = "akiragifa"
-print("akira" in name)  # True
+print("akira" in my_name)  # True
 
 
 # -------------------------------------------------------------

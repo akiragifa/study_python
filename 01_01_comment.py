@@ -5,7 +5,7 @@
 
 
 """
-多行注释：三个双引号或三个单引号中间的全部内容都为注释（PEP 8（Python Enhancement Proposal 8）推荐注释样式）
+多行注释：三个双引号或三个单引号中间的全部内容都为没有被使用的字符串，但是经常被用作注释（PEP 8（Python Enhancement Proposal 8）推荐注释样式）
 """
 
 

@@ -9,7 +9,7 @@ total = 0
 i = 1
 
 while i <= 100:
-    sum += i
+    total += i
     i += 1
 
 print(total)
@@ -35,6 +35,5 @@ num = int(input("请输入数字，输入0退出："))
 while num != 0:
     print("你输入的数字是：", num)
     num = int(input("请输入数字，输入0退出："))
-    continue
 
 print("程序结束")
