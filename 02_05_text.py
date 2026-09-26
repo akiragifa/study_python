@@ -93,7 +93,7 @@ print(type(text[0]))    # <class 'str'>
 字符串切片
 """
 
-print(text[0:3])    # Pyt，左开右闭区间
+print(text[0:3])    # Pyt，左闭右开区间
 print(type(text[0:3]))  # <class 'str'>
 
 print("后切片：", text[1: ])    # 后切片： ython，取索引1及之后的所有

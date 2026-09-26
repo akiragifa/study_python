@@ -40,10 +40,88 @@ print("我是%%的1%%" % ())   # 我是%的1%，两个%%，输出 “%” 本身
 
 
 """
-    f 格式化
-"""
+f 格式化
+    
+    f"{变量:格式说明}"
 
+"""
 
 mass = 1500
 output = f"Vehicle mass is {mass} kg"
 print(output)   # Vehicle mass is 1500 kg
+
+
+# -------------------------------------------------------------
+
+"""
+    format 格式化（更常用f格式化）
+"""
+
+name = "akiragifa"
+age = 18
+
+text1 = "我叫{}，今年{}岁".format(name, age)
+text2 = f"我叫{name}，今年{age}岁"
+
+print(text1)    # 我叫akiragifa，今年18岁
+print(text2)    # 我叫akiragifa，今年18岁
+
+print(text1 == text2)   # True
+print(text1 is text2)   # False
+
+# --------------------------
+
+"""
+指定位置
+"""
+text3 = "我叫{0}，今年{1}岁".format(name, age)
+text4 = "我叫{0}，他也叫{0}，今年{1}岁".format(name, age)
+
+print(text3)    # 我叫akiragifa，今年18岁
+print(text4)    # 我叫akiragifa，他也叫akiragifa，今年18岁
+
+
+# --------------------------
+
+"""关键字参数"""
+
+text5 = "我叫{name}，今年{age}岁".format(
+    name = "aki",
+    age = 29
+)
+
+print(text5)    # 我叫aki，今年29岁
+
+
+# --------------------------
+
+"""
+: 后面写 “格式规则”
+
+{:.2f} 可以拆成：
+    {
+    :
+    .2f
+    }
+
+: 表示 后面开始写格式化规则
+.2f 表示 按浮点数格式输出，并保留2位小数
+
+"""
+
+
+"""保留小数"""
+pi = 3.1415926
+print("{:.2f}".format(pi))  # 3.14
+
+
+"""指定总宽度"""
+x = 123
+print("{:5}".format(x))     #   123，前面有两个空格，数字默认右对齐
+
+"""小数+总宽度"""
+x = 3.14159
+print("{:8.3f}".format(x))  #    3.142，前面有3个空格
+
+
+"""等等等等规则，以后见到时再学，而且更推荐用f-string格式化"""

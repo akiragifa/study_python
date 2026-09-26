@@ -357,3 +357,41 @@ Python 基础
 Python 基础熟练 + NumPy 熟练 + 能读懂 PyTorch / API / Agent 代码。
 
 到这里就完全够用了。
+
+
+
+
+list
+↓
+tuple
+↓
+dict
+↓
+set
+↓
+function
+↓
+module / import
+↓
+文件读写
+↓
+异常处理
+↓
+pathlib
+↓
+class 基础
+
+
+| 内容            | CAE重要度 | AI重要度 |
+| ------------- | -----: | ----: |
+| list          |  ★★★★★ | ★★★★★ |
+| dict          |  ★★★★★ | ★★★★★ |
+| tuple         |   ★★★★ |   ★★★ |
+| set           |    ★★★ |    ★★ |
+| function      |  ★★★★★ | ★★★★★ |
+| 文件读写          |  ★★★★★ |  ★★★★ |
+| pathlib       |  ★★★★★ |   ★★★ |
+| exception     |  ★★★★★ | ★★★★★ |
+| module/import |  ★★★★★ | ★★★★★ |
+| class         |   ★★★★ | ★★★★★ |
+| NumPy         |  ★★★★★ | ★★★★★ |
