@@ -1,7 +1,7 @@
 # print("tools 包被导入了")
 
 from .add import add
-from .mutiply import mutiply
+from .multiply import multiply
 
 """
 from . import add   导入的是add模块

@@ -74,7 +74,7 @@ class Car:
 
 
     def __repr__(self):
-        return f"Car(brand={car.brand}, speed={car.speed})"
+        return f"Car(brand={self.brand!r}, speed={self.speed})"     # !r 会保留字符串的引号
 
 car = Car("BMW", 120)
 
@@ -87,3 +87,7 @@ print(repr(car))    # Car(brand=BMW, speed=120)
 
 """重要"""
 print([car])    # [Car(brand=BMW, speed=120)]，列表展示内部元素时，通常使用元素的 repr()
+
+
+car2 = Car("BYD", 200)
+print(repr(car2))   # Car(brand=BYD, speed=200)

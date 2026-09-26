@@ -179,7 +179,8 @@ replace(...)
 """
 删除 -> None
 """
-path3.unlink()   # 主要用于文件，不是普通文件夹
+path4 = Path("docs_pathlib_temp/test104.txt")
+path4.unlink()   # 主要用于文件，不是普通文件夹
 
 
 """

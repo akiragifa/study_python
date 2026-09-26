@@ -32,7 +32,7 @@ car2 = copy.copy(car1)
 
 print(car1 is car2)     # False
 print(car1.brand is car2.brand)     # True
-print(car2.parts is car2.parts)     # True
+print(car1.parts is car2.parts)     # True
 
 # --------------------------
 
